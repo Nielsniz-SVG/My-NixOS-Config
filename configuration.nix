@@ -9,7 +9,14 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
+      inputs.silentSDDM.nixosModules.default
     ];
+    
+  programs.silentSDDM = {
+      enable = true;
+      theme = "catppuccin-mocha";
+      # settings = { ... }; see example in module
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -93,8 +100,16 @@
     ];
   };
 
+  #Steam
+    hardware.graphics = {
+    enable = true;
+    enable32Bit = true; # C'est la ligne magique qui résout ton problème
+  };
+
+  programs.steam.enable = true;
+
   # Install firefox.
-  programs.firefox.enable = true;
+  programs.firefox.enable = false;
   
   #Enable Flatpak
   services.flatpak.enable = true;
@@ -125,6 +140,7 @@
    kdePackages.plasma-browser-integration
    libreoffice-fresh
    steam
+   obs-studio
   ];
 
   home-manager = {
