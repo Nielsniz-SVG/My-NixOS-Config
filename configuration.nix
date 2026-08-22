@@ -143,6 +143,7 @@
    obs-studio
    fastfetch
    fetch
+   localsend
   ];
 
   home-manager = {
