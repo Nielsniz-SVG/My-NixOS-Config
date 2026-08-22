@@ -141,6 +141,8 @@
    libreoffice-fresh
    steam
    obs-studio
+   fastfetch
+   fetch
   ];
 
   home-manager = {
