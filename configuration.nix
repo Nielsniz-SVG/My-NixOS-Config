@@ -144,6 +144,8 @@
    fastfetch
    fetch
    localsend
+   cava 
+   htop
   ];
 
   home-manager = {
