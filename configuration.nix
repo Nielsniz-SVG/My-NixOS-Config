@@ -146,6 +146,7 @@
    localsend
    cava 
    htop
+   curl
    gimp
   ];
 
