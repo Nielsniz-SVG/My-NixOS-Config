@@ -148,6 +148,8 @@
    htop
    curl
    gimp
+   prismlauncher
+   openjdk25
   ];
 
   home-manager = {
