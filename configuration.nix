@@ -132,7 +132,6 @@
    vivaldi
    vscodium
    pkgs.kdePackages.kdenlive
-   lunar-client
    git
    vlc
    discord
