@@ -137,7 +137,7 @@
    discord
    telegram-desktop
    kdePackages.plasma-browser-integration
-   libreoffice-fresh
+   libreoffice-stable
    steam
    obs-studio
    fastfetch
