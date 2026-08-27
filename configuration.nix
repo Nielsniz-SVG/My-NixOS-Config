@@ -150,7 +150,6 @@
    prismlauncher
    openjdk25
    neovim
-   npm
    python3
   ];
 
