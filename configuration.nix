@@ -149,6 +149,7 @@
    gimp
    prismlauncher
    openjdk25
+   neovim
   ];
 
   home-manager = {
