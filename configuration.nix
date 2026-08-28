@@ -149,8 +149,6 @@
    gimp
    prismlauncher
    openjdk25
-   neovim
-   python3
   ];
 
   home-manager = {
