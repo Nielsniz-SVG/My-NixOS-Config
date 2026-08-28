@@ -86,4 +86,14 @@
       };
     };
   };
+
+  programs.git = {
+    enable = true;
+    userName = "Nielsniz-SVG";
+    userEmail = "nielsboulengernincq@gmail.com";
+    extraConfig = {
+      init.defaultBranch = "main";
+      url."git@github.com:".insteadOf = "https://github.com/";
+    };
+  };
 }
