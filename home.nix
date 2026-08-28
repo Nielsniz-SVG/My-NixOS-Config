@@ -73,4 +73,17 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.ssh = {
+    enable = true;               # Lance l'agent SSH au démarrage de ta session
+    addKeysToAgent = "yes";          # Ajoute automatiquement ta clé à l'agent
+    matchBlocks = {
+      "github.com" = {
+        hostname = "github.com";
+        user = "git";
+        identityFile = "~/.ssh/id_ed25519";
+        identitiesOnly = true;
+      };
+    };
+  };
 }
