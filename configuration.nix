@@ -141,7 +141,6 @@
    gimp
    prismlauncher
    openjdk25
-   neovim
    obsidian
   ];
 
