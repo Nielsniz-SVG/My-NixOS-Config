@@ -3,20 +3,15 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, inputs, lib, ... }:
- 
+
 {
   imports =
-  [
-    inputs.silentSDDM.nixosModules.default
-  ]
-  ++ lib.optional (builtins.pathExists /etc/nixos/hardware-configuration.nix)
-    /etc/nixos/hardware-configuration.nix;
-    
-  programs.silentSDDM = {
-      enable = true;
-      theme = "catppuccin-mocha";
-      # settings = { ... }; see example in module
-  };
+    [
+      inputs.silentSDDM.nixosModules.default
+    ]
+    ++ lib.optional
+      (builtins.pathExists /etc/nixos-local/hardware-configuration.nix)
+      /etc/nixos-local/hardware-configuration.nix;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
