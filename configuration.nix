@@ -150,6 +150,8 @@
    prismlauncher
    openjdk25
    neovim
+   ulauncher
+   obsidian
   ];
 
   home-manager = {
