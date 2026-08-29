@@ -6,11 +6,11 @@
  
 {
   imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
-      inputs.silentSDDM.nixosModules.default
-    ];
+  [
+    inputs.silentSDDM.nixosModules.default
+  ]
+  ++ lib.optional (builtins.pathExists /etc/nixos/hardware-configuration.nix)
+    /etc/nixos/hardware-configuration.nix;
     
   programs.silentSDDM = {
       enable = true;
