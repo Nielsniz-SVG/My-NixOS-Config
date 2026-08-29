@@ -2,16 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, lib, ... }:
+{ config, pkgs, inputs, lib, hardwareConfiguration, ... }:
 
 {
-  imports =
-    [
-      inputs.silentSDDM.nixosModules.default
-    ]
-    ++ lib.optional
-      (builtins.pathExists /etc/nixos-local/hardware-configuration.nix)
-      /etc/nixos-local/hardware-configuration.nix;
+  imports = [
+  hardwareConfiguration
+  inputs.silentSDDM.nixosModules.default
+];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
